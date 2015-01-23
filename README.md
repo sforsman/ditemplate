@@ -5,12 +5,12 @@ Comes with simple scripts for installation and updating the lock file. Make sure
 your path and that you have logged into Deis. Then run
 
 ```bash
-# Setup composer and download helpers etc
-./install.sh
-
 # These are not necessary unless you used git clone
 rm -fr .git
 rm README.md
+
+# Setup composer and download helpers etc
+./install.sh
 
 # Create a new repo for your app and add the files required for deployment
 git init
