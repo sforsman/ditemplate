@@ -13,7 +13,7 @@ rm README.md
 
 # Create a new repo for your app and add the files required for deployment
 git init
-git add composer.json composer.lock .profile.d/
+git add composer.json composer.lock .profile.d/ .gitignore
 
 # Ignore the scripts in your repo root
 echo update.sh >> .gitignore
