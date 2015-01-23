@@ -8,11 +8,9 @@ If you have not, the world will come crumbling down.
 Quickstart
 ----------
 
-To quickstart, you need to store a config.json in the repository root.
-
-1) Clone this repository
-2) Make sure your config.json exists in the repository root
-3) Run
+1. Clone this repository
+2. Make sure your config.json exists in the repository root
+3. Run
 
 ```bash
 ./quickstart.sh <myappname>
