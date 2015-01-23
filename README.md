@@ -2,7 +2,7 @@ Sample PW instance template for new projects
 ============================================
 
 Comes with a Deis/Heroku -deployable composer.json and simple scripts for installation and 
-updating the lock file. Make sure you have curl inyour path and that you have logged into Deis.
+updating the lock file. Make sure you have curl in your path and that you have logged into Deis.
 
 Then run
 
