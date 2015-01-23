@@ -4,15 +4,32 @@ Sample PW instance template for new projects
 Comes with simple scripts for installation and updating the lock file. Make sure you have curl in your path and run
 
 ```
-  ./install.sh
-  rm -fr .git
-  git init
-  git add composer.json composer.lock .profile.d/
-  echo update.sh >> .gitignore
-  echo install.sh >> .gitignore
-  git commit -m "Initial commit"
-  cp vendor/sforsman/dhelper/contrib/example_config.json ./config.json
-  <edit the configuration>
-  vendor/sforsman/dhelper/bin/setup_deis_instance <myinstance> config.json
-  git push deis master
+# Setup composer and download helpers etc
+./install.sh
+
+# These are not necessary unless you used git clone
+rm -fr .git
+rm README.md
+
+# Create a new repo for your app and add the files required for deployment
+git init
+git add composer.json composer.lock .profile.d/
+
+# Ignore the scripts in your repo root
+echo update.sh >> .gitignore
+echo install.sh >> .gitignore
+
+# Commit first version
+git commit -m "Initial commit"
+
+# Copy the configuration template
+cp vendor/sforsman/dhelper/contrib/example_config.json ./config.json
+
+<edit the configuration>
+
+# Create a new Deis app
+vendor/sforsman/dhelper/bin/setup_deis_instance <myinstance> config.json
+
+# Deploy it!
+git push deis master
 ```
