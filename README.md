@@ -34,6 +34,8 @@ vendor/sforsman/dhelper/bin/setup_deis_instance <myinstance> config.json
 # Deploy it!
 git push deis master
 
+<get coffee>
+
 # Check the logs to confirm deployment was successful
 deis logs
 ```
