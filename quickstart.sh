@@ -3,7 +3,7 @@
 # TODO: Check what's in .git
 # TODO: Confirm we are logged into Deis
 
-if [ -f config.json ]; then
+if [ ! -f config.json ]; then
   echo "This script cannot be used if there is no config.json"
   exit 1
 fi
