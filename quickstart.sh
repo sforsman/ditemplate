@@ -20,12 +20,9 @@ rm README.md
 # Install composer etc
 ./install.sh
 
-# Since we are quickstarting we always want to use the fresh profile
-rm -fr .profile.d
-
 # Init a new repo and add the required files
 git init
-git add composer.json composer.lock .gitignore
+git add composer.json composer.lock .gitignore .profile.d
 git commit -m "Initial commit"
 
 # Create the app
