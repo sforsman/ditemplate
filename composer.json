@@ -22,8 +22,7 @@
   ],
   "scripts": {
       "post-install-cmd": [
-        "mkdir .profile.d",
-        "cp -p vendor/sforsman/dhelper/contrib/profile.d/* .profile.d/"
+        "sforsman\\Dhelper::deployProfile"
       ]
   }
 }
