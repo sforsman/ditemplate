@@ -1,8 +1,10 @@
 Sample PW instance template for new projects
 ============================================
 
-Comes with simple scripts for installation and updating the lock file. Make sure you have curl in 
-your path and that you have logged into Deis. Then run
+Comes with a Deis/Heroku -deployable composer.json and simple scripts for installation and 
+updating the lock file. Make sure you have curl inyour path and that you have logged into Deis.
+
+Then run
 
 ```bash
 # These are not necessary unless you used git clone
@@ -26,7 +28,7 @@ git commit -m "Initial commit"
 # Copy the configuration template
 cp vendor/sforsman/dhelper/contrib/example_config.json ./config.json
 
-<edit the configuration>
+# <edit the configuration>
 
 # Create a new Deis app
 vendor/sforsman/dhelper/bin/setup_deis_instance <myinstance> config.json
@@ -34,7 +36,7 @@ vendor/sforsman/dhelper/bin/setup_deis_instance <myinstance> config.json
 # Deploy it!
 git push deis master
 
-<get coffee>
+# <get coffee>
 
 # Check the logs to confirm deployment was successful
 deis logs
