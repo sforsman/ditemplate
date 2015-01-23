@@ -1,0 +1,24 @@
+{
+  "require": {
+    "ext-gd": "*",
+    "ext-redis": "*",
+    "sforsman/dhelper": "dev-master",
+    "sforsman/dpw": "dev-master",
+    "sforsman/dsite": "dev-master"
+  },
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/sforsman/dhelper"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/sforsman/dpw"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/sforsman/dsite"
+    }
+  ]
+  "post-install-cmd": "cp -rp vendor/sforsman/dhelper/contrinb/profile.d .profile.d"
+}
