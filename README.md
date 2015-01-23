@@ -1,38 +1,57 @@
 Sample PW instance template for new projects
 ============================================
 
-Comes with simple scripts for installation and updating the lock file. Make sure you have curl in 
-your path and that you have logged into Deis. Then run
+Comes with a Deis/Heroku -deployable composer.json and simple scripts for installation and 
+updating the lock file. Make sure you have curl in your path and that you have logged into Deis.
+If you have not, the world will come crumbling down.
+
+Quickstart
+----------
+
+To quickstart, you need to store a config.json in the repository root.
+
+1) Clone this repository
+2) Make sure your config.json exists in the repository root
+3) Run
+
+```bash
+./quickstart.sh <myappname>
+```
+
+The script will remove all the crap from this repository and deploy a new app. You probably want to
+add another remote and push the app to your VCS as well.
+
+Manual deployment
+-----------------
+
+This is basically useful only if you are deploying an existing app and/or just 
+grabbed composer.json from this repo. These are the steps you need to execute
 
 ```bash
 # Setup composer and download helpers etc
 ./install.sh
 
-# These are not necessary unless you used git clone
-rm -fr .git
-rm README.md
-
-# Create a new repo for your app and add the files required for deployment
-git init
+# Make sure that the files needed for deployment are in your repo
 git add composer.json composer.lock .profile.d/ .gitignore
 
-# Ignore the scripts in your repo root
-echo update.sh >> .gitignore
-echo install.sh >> .gitignore
+# If you need additional deployment actions, just place a deploy.php 
+# in the repo root and commit it as well
 
-# Commit first version
-git commit -m "Initial commit"
+# Commit changes
+git commit -m "Added deployment scripts"
 
 # Copy the configuration template
 cp vendor/sforsman/dhelper/contrib/example_config.json ./config.json
 
-<edit the configuration>
+# <edit the configuration>
 
 # Create a new Deis app
-vendor/sforsman/dhelper/bin/setup_deis_instance <myinstance> config.json
+vendor/bin/setup_deis_instance <myinstance> config.json
 
 # Deploy it!
 git push deis master
+
+# <get coffee>
 
 # Check the logs to confirm deployment was successful
 deis logs
