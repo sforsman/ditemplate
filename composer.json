@@ -19,6 +19,8 @@
       "type": "vcs",
       "url": "https://github.com/sforsman/dsite"
     }
-  ]
-  "post-install-cmd": "cp -rp vendor/sforsman/dhelper/contrinb/profile.d .profile.d"
+  ],
+  "scripts": {
+      "post-install-cmd": "cp -rp vendor/sforsman/dhelper/contrib/profile.d .profile.d"
+  }
 }
