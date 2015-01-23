@@ -41,3 +41,6 @@ git push deis master
 # Check the logs to confirm deployment was successful
 deis logs
 ```
+
+TODO: Create quickstart.sh that does the above, but requires config.json
+      - also add *.sh to .gitignore by default
