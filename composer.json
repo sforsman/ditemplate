@@ -22,7 +22,7 @@
   ],
   "scripts": {
       "post-install-cmd": [
-        "sforsman\\Dhelper::deployProfile"
+        "Dhelper\\Deployer::deployProfile"
       ]
   }
 }
