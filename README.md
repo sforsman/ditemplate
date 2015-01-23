@@ -1,7 +1,8 @@
 Sample PW instance template for new projects
 ============================================
 
-Comes with simple scripts for installation and updating the lock file. Make sure you have curl in your path and run
+Comes with simple scripts for installation and updating the lock file. Make sure you have curl in 
+your path and that you have logged into Deis. Then run
 
 ```bash
 # Setup composer and download helpers etc
@@ -32,4 +33,7 @@ vendor/sforsman/dhelper/bin/setup_deis_instance <myinstance> config.json
 
 # Deploy it!
 git push deis master
+
+# Check the logs to confirm deployment was successful
+deis logs
 ```
