@@ -9,7 +9,7 @@ Quickstart
 ----------
 
 1. Clone this repository
-2. Make sure your config.json exists in the repository root
+2. Make sure your config.json exists in the repository root (and make sure PHP is in your path)
 3. Run
 
 ```bash
